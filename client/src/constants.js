@@ -11,4 +11,4 @@ export const Connectors = [
     }
 ]
 
-export const API_HOST = "https://1-click-api.tamago.finance/"
+export const API_HOST = "https://1-click-api.tamago.finance"
