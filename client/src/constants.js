@@ -11,4 +11,4 @@ export const Connectors = [
     }
 ]
 
-export const API_HOST = "http://lb-agent-8e844a6-1124593334.ap-southeast-1.elb.amazonaws.com:8000"
+export const API_HOST = "https://1-click-api.tamago.finance/"
