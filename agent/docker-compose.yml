@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  # cache:
+  #   image: redis:6.2-alpine
+  #   restart: always
+  #   ports:
+  #     - '6379:6379'
+  #   command: redis-server --save 20 1 --loglevel warning --requirepass foobar
+  #   volumes: 
+  #     - cache:/data
+  agent:
+    image: pisuthd/promptsea-agent
+    build:
+      context: ./
+    ports:
+      - 8000:8000
+    environment:
+      OPENAI_API_KEY: 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
+      OPENAI_API_MODEL: gpt-3.5-turbo
+      HF_ACCESS_KEY: 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
+    volumes:
+      - ./:/src
