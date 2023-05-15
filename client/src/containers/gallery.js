@@ -35,12 +35,14 @@ const GalleryContainer = () => {
                 <div className="grid grid-cols-12 p-2 gap-3">
                     {items.map((item, index) => {
 
-                        const name = `${item.name}`; 
+                        console.log("item --> ", item)
+
+                        const name = `${item.variables.topic} Crossword`; 
                         return (
                             <a class="col-span-4" index={index} target="_blank" href={`${API_HOST}/crossword?id=${item.jobId}`}>
                                 <div class="p-4 cursor-pointer border-2 flex flex-col border-transparent hover:border-blue-600 bg-gray-700 h-60 rounded-lg">
                                     <div class="mx-auto flex flex-col">
-                                        <h1 class="text-lg text-white mt-2 text-center font-bold">
+                                        <h1 class="text-lg text-white mt-2 capitalize text-center font-bold">
                                             {name}
                                         </h1>
                                         <p class="text-sm text-center mt-1 text-gray-300 ">
